@@ -12,22 +12,25 @@ namespace Actividad_03
         {
             // Lea las teclas presionadas y finalice al presionar la tecla “X”.
             string teclas;
-            string finalizar;
+            
             do
             {
-                Console.WriteLine("Presione las teclas que requiere: ");
-                teclas = Console.ReadLine();
+
+               Console.WriteLine("Presione las teclas que requiere: ");
+                teclas= Console.ReadLine();
                 Console.WriteLine("\r");
 
                 Console.WriteLine("Las teclas que escribio son: " + teclas);
-                Console.ReadLine();
+                Console.WriteLine("\r");
+               
+                Console.WriteLine("Para finalizar el programa, debe ingresar la letra 'x'");
                 Console.WriteLine("\r");
 
-                Console.WriteLine("¿Desea finalizar el programa? (X = No)");
-                finalizar = Console.ReadLine();
-
-            } while (finalizar == " x ");
+               teclas = Console.ReadLine();
+                
+            } while (teclas.ToLower() != "x");
         }
+
 
     }
 }
